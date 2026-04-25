@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Online Courses Catalog | SHN Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#7e5700",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#014600",
+                        "surface-variant": "#e5e2e1",
+                        "primary": "#3900b7",
+                        "primary-container": "#5022e1",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#ffba35",
+                        "background": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "outline-variant": "#c9c4d9",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#016000",
+                        "surface": "#fcf9f8",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#002200",
+                        "outline": "#797587",
+                        "on-primary-fixed": "#1b0063",
+                        "secondary-container": "#ffb61e",
+                        "surface-tint": "#5d37ee",
+                        "tertiary-fixed": "#77ff61",
+                        "on-secondary-fixed": "#281900",
+                        "on-primary-container": "#c7bcff",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#6c4a00",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#484556",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c9bfff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#4503d7",
+                        "inverse-primary": "#c9bfff",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-container": "#21e417",
+                        "primary-fixed": "#e5deff",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#ffdeac",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#015300",
+                        "tertiary-fixed-dim": "#24e519"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-bold": ["Manrope"],
+                        "display": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAFBFD;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none docked full-width top-0 z-50 fixed w-full">
+<div class="flex justify-between items-center w-full px-8 h-20 max-w-7xl mx-auto font-noto-serif antialiased">
+<div class="text-2xl font-bold text-[#5022E1] dark:text-white tracking-tight"><img alt="SHN Academy Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ui_if-foBePiiZ5qnIuk9oQLBs8PEuxJ8DlVlIMuMThwNsumSHiYZxMLpVJux09MIRR79qgJphR25t4lsboyuw_kcrkU-1DolgYXyZihF0eqcKuB3M6QLBo4kXqutEi4SsmMCSKiA041HXTiOevn51krOeB247ynH4v3g9H5jH1qn46k71uhjtlDZZw4VJSDCS-qQ2e9YMbtFRHcFK5NKmkwGmF2Qkf-z0wUDkhMrBTn0l5B8K9uVcPu11dfiO1ByRGxcAzsfhuOds"/></div>
+<div class="hidden md:flex space-x-8">
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 active:scale-95 transform" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 active:scale-95 transform" href="#">About</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 active:scale-95 transform" href="#">Blog</a>
+<a class="text-[#5022E1] dark:text-indigo-400 border-b-2 border-[#5022E1] pb-1 font-bold" href="#">Online Courses</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 active:scale-95 transform" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-5 py-2 text-gray-700 font-semibold hover:bg-gray-50 rounded-lg transition-colors">Login</button>
+<button class="px-5 py-2 bg-[#5022E1] text-white font-semibold rounded-lg hover:bg-primary transition-all active:scale-95">Sign Up</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-12">
+<h1 class="font-display text-display text-on-background mb-4">Expand Your Knowledge</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover professional courses designed to help you master new skills and advance your career through enlightened growth.</p>
+</header>
+<!-- Search and Filter Bar -->
+<section class="mb-12 flex flex-col md:flex-row gap-4 items-center justify-between">
+<div class="relative w-full md:w-1/3">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-body-md" placeholder="Search courses..." type="text"/>
+</div>
+<div class="flex overflow-x-auto w-full md:w-auto gap-2 pb-2 md:pb-0 scrollbar-hide">
+<button class="px-6 py-2 bg-primary-container text-white rounded-full font-label-bold whitespace-nowrap">All Courses</button>
+<button class="px-6 py-2 bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-colors">Business</button>
+<button class="px-6 py-2 bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-colors">Technology</button>
+<button class="px-6 py-2 bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-colors">Design</button>
+<button class="px-6 py-2 bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-full font-label-bold whitespace-nowrap transition-colors">Psychology</button>
+</div>
+</section>
+<!-- Course Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Course Card 1 -->
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Digital Strategy Masterclass" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Professional workspace with laptop and coffee cup on a clean desk, bright and airy academic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBguj8YMHYFDBMX77PXtRiuVStKa_SfFB3lO1P1qXzs-VY1WSnBcV87VnsRZtjO2G0r8ATx-q_OCkmVLangrNS2V29LqDbXaGgByN219a_Bx3mMyM_kjDbz_LK42ag9BusjfgiE2WXppLmnqTX256XhT2Cvap_jui0FodL8ipvEC_xnz7GMX83zT4AJOhix3S_5oXsUuhOli4UT6IoSnLlSrH3MmtvBdFcfXEgJuI_0dxJmJ0DsyUhOzDI8bFkx66wCR4YdEB8Vqs_C"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md font-label-bold text-xs">Bestseller</div>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-bold text-xs uppercase tracking-wider mb-2 block">Business</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 line-clamp-2">The Enlightenment of Modern Digital Strategy</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Dr. Julian Sterling</p>
+<div class="flex items-center gap-1 mb-4">
+<span class="text-secondary font-bold text-sm">4.9</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-outline text-xs ml-1">(2,450)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-background">$89.99</span>
+<button class="bg-[#5022E1] text-white p-3 rounded-xl hover:bg-primary transition-colors active:scale-95 flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Advanced UI/UX Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern high-tech classroom with students working on collaborative design projects using advanced software" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzQGjsl2NptafWnsPZCVt7dlJJqs33j_acSojoWkls-f9mUZw2s80gC_osUsyeSeAQuzW6rVlyy5dyYgNu8XBaDDIaHJr0UlH8WXxW9a99Oz3x9JLx3GInUmqt6rPyQ1w8heVZAEETJJPrpTbdDnfIJKa21NYd_Bair-UbSe3uHP9k8TaGU5kIDXDvEOroazzOkdNz1ocPU2cGm1uFl4nE3L-o4-L6-2Emyd5S9Ge9jDz-pp1Bq6L8liCjNsFCecGf3tSIWH8pHkfS"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-md font-label-bold text-xs">New</div>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-bold text-xs uppercase tracking-wider mb-2 block">Design</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 line-clamp-2">Philosophy of Human-Centered UI Design</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Elena Rousseau</p>
+<div class="flex items-center gap-1 mb-4">
+<span class="text-secondary font-bold text-sm">4.8</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star_half" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-outline text-xs ml-1">(890)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-background">$124.00</span>
+<button class="bg-[#5022E1] text-white p-3 rounded-xl hover:bg-primary transition-colors active:scale-95 flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Full-stack Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract visualization of complex code data structures in dark neon tones of indigo and purple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJLewpHo0-EUdDK-hu1O24jdh3uwqU7rn3UuyCFDHBQTAzsGbHRW2s3HFYAIm1dl-BA9_Ocm1IFG49rxNvJCl0bJ6zZSdQaGEp_I1uhmwFHEVkka-YLQjsmbFbUnsxgBqVsi8C5TB1T4l49v1xfXlT3VXs7umFByx6rXOaHkVewMK7d83I7P2hYhsomrpX6GfErU0ArMvsaqKb6IoxIsbiDtkXzZXw2iUt59gc3nYSnAQngz-LUMIglfUaZhmCTUVgPH_WUwbcxTCN"/>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-bold text-xs uppercase tracking-wider mb-2 block">Technology</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 line-clamp-2">The Architecture of Scalable Systems</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Marcus Aurelius Dev</p>
+<div class="flex items-center gap-1 mb-4">
+<span class="text-secondary font-bold text-sm">4.7</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<span class="text-outline text-xs ml-1">(1,120)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-background">$199.00</span>
+<button class="bg-[#5022E1] text-white p-3 rounded-xl hover:bg-primary transition-colors active:scale-95 flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 4 -->
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Leadership and Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Group of diverse professionals engaged in a high-level corporate meeting, focused and creative energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUnv3eGLA5-xHvpUhQBrRxj4JCiK-B1XPCGiHlak81vhOn0i3cv2X285sOjGxT-gATsWjOoHBq8Z5E48RmqoFUjlQWuWtBQvH5LcyLEsTXSyakX8DimcbS62yTDTUHbC7sQdgUEzfws_5AfhfswPUy1jGnIGJ01v_GEGVBvN0USdkm2sCD38dDY-J6Dfejx2e1ZpmhtE3aJXihaAAokxx56pHbP4-sqtg_FnmTCB-rF9FhaC0jH_6K_hz3Nd0BSjgOPHzdPsbvNUXg"/>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-bold text-xs uppercase tracking-wider mb-2 block">Leadership</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 line-clamp-2">Leading with Emotional Intelligence</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Sarah Jenkins, PhD</p>
+<div class="flex items-center gap-1 mb-4">
+<span class="text-secondary font-bold text-sm">4.9</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-outline text-xs ml-1">(5,340)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-background">$74.50</span>
+<button class="bg-[#5022E1] text-white p-3 rounded-xl hover:bg-primary transition-colors active:scale-95 flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 5 -->
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Financial Literacy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Financial analytics dashboard with complex charts and golden accents representing wealth and growth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlwqon7PtcxiOOfZPDHgiH4iqaJPpiCR61pHe8V36qo1y2e4xCzyiJkhepgBED74tHRD-0hrMDz4mfnbS1JI_2SngWe3WmBz3cLfTHgRYImfoI0uvJMWwlLVl9QmJrqWkIAB0e-BlThkrVqGN6nlmUd4zaR4VbI0nUpD2GbLJLpONQwRI_PjzrPnkkzwakFo2cMmNKtT6zqFExWRIPkKprvAU784ixVv3Oz_C-buJ-3kwjjxIS3ekilidEyVvf4dKTeC3Prlx0tZyX"/>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-bold text-xs uppercase tracking-wider mb-2 block">Finance</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 line-clamp-2">Wealth Creation in the Digital Age</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Robert Kingsly</p>
+<div class="flex items-center gap-1 mb-4">
+<span class="text-secondary font-bold text-sm">4.6</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star_half" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-outline text-xs ml-1">(1,020)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-background">$99.99</span>
+<button class="bg-[#5022E1] text-white p-3 rounded-xl hover:bg-primary transition-colors active:scale-95 flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Course Card 6 -->
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden group hover:shadow-lg transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<img alt="Creative Writing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Calm morning study setup with a laptop and notebook, surrounded by indoor plants and soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFcaIcFfj7Z8kp4lnfYLxHIIZAAuAoUXQRrd4NwAaz1CRucFjP0zz1VTLHJpxLr41jLKZoxFqU1x1WnUd8kIU8KiECdcJffD2k3cd4SsMHqKz8xRV5AJtQZmF7Y3FOOn9Z60bTG3nAtMt0ZGZV3L3OSN7PAzRjT-cSihjBuahh_EYgfTmT7rVRLVX7Q8dZizIr8ehgKC-jjrI6DNEn64VQAX60NcCESgDv2EsU2wsIJ9mzIEFgSCiYTS0dK-EkzZM1TzGNJLzMU1r_"/>
+</div>
+<div class="p-6">
+<span class="text-primary font-label-bold text-xs uppercase tracking-wider mb-2 block">Arts</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2 line-clamp-2">Mastering Narrative &amp; Storytelling</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Lydia Vance</p>
+<div class="flex items-center gap-1 mb-4">
+<span class="text-secondary font-bold text-sm">5.0</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-outline text-xs ml-1">(420)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-background">$65.00</span>
+<button class="bg-[#5022E1] text-white p-3 rounded-xl hover:bg-primary transition-colors active:scale-95 flex items-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary-container text-white rounded-lg font-label-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg font-label-bold hover:bg-surface-container transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg font-label-bold hover:bg-surface-container transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-950 w-full py-12 border-t mt-auto border-t border-gray-200 dark:border-gray-800">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-7xl mx-auto font-noto-serif text-xs">
+<div class="space-y-4">
+<div class="text-sm font-bold text-gray-900 dark:text-white">SHN Academy</div>
+<p class="text-gray-500 dark:text-gray-400 max-w-xs text-sm leading-relaxed">© 2024 SHN Academy. Empowering enlightened growth through world-class educational resources and mentorship.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col space-y-3">
+<a class="text-gray-500 hover:text-[#5022E1] dark:hover:text-gray-200 transition-colors" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-[#5022E1] dark:hover:text-gray-200 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-3">
+<a class="text-gray-500 hover:text-[#5022E1] dark:hover:text-gray-200 transition-colors" href="#">Cookie Policy</a>
+<a class="text-gray-500 hover:text-[#5022E1] dark:hover:text-gray-200 transition-colors" href="#">Affiliate Program</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

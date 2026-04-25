@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHN Academy - Student Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#7e5700",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#014600",
+                        "surface-variant": "#e5e2e1",
+                        "primary": "#3900b7",
+                        "primary-container": "#5022e1",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#ffba35",
+                        "background": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "outline-variant": "#c9c4d9",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#016000",
+                        "surface": "#fcf9f8",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#002200",
+                        "outline": "#797587",
+                        "on-primary-fixed": "#1b0063",
+                        "secondary-container": "#ffb61e",
+                        "surface-tint": "#5d37ee",
+                        "tertiary-fixed": "#77ff61",
+                        "on-secondary-fixed": "#281900",
+                        "on-primary-container": "#c7bcff",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#6c4a00",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#484556",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c9bfff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#4503d7",
+                        "inverse-primary": "#c9bfff",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-container": "#21e417",
+                        "primary-fixed": "#e5deff",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#ffdeac",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#015300",
+                        "tertiary-fixed-dim": "#24e519"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-bold": ["Manrope"],
+                        "display": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: #FAFBFD;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-primary-fixed-dim">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-gray-200 docked full-width top-0 z-50 shadow-sm sticky">
+<div class="flex justify-between items-center w-full px-8 h-20 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-bold text-[#5022E1] tracking-tight font-noto-serif"><img alt="SHN Academy Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uj82RPiY9ykp0v3riYYTzQA88V1zGgl-WaA84sX8q3oeu1rnO31E7o07-LF8lTXJKwRjD19UXstZvZoxAhNqbPD5SyWD2CvKRmJz0UKXJu4-o3cMWt_i8dN6afgVVlFDf-JzSvJNrQ4H2Tf_6MQblJpHvMrAztKHk0pUrqCORaveyjV2WUJJELHmCwPKMUB4CmvuQq8cuAx2rxWpvhnJwgt7aZR5Jzr4wXsBFFVyNaw51pGoVqk8TpzPIUn8f9HOqXlJFKp3bRovmY"/></span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-gray-500 hover:text-[#5022E1] font-medium transition-colors duration-200" href="#">Home</a>
+<a class="text-[#5022E1] border-b-2 border-[#5022E1] pb-1 font-bold" href="#">Online Courses</a>
+<a class="text-gray-500 hover:text-[#5022E1] font-medium transition-colors duration-200" href="#">Blog</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-label-bold text-on-background">Alex Sterling</p>
+<p class="text-label-sm text-outline">74% Progress</p>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a male student smiling warmly against a soft blue background, modern educational aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9kAkCDT39y9SFxsHwe8EbO-MobxT7QxtvTa_daKU50Lbn4x4Qy8cg8FlaxxuygoBu0cFs4JwBcjCZNrQ_asqlUDn7Jr46kLpE-ZZq6AzIl5LQwDzhitNLgorOClJFunRmeMnaXJYz6aIjdl7buraKppILbFR18yqrPbt2Z-5ZTGRm9jT4gOKDrACBLP8vK-Mi5EMOQ97qPXoXPcWBgYH93c2u3QtvwrvUExmkKu3xvHUEnuKAysBEbGhg1hgFc6VBInedboWBr8_G"/>
+</div>
+</div>
+<button class="bg-[#5022E1] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-primary active:scale-95 transform transition-all shadow-md">Dashboard</button>
+</div>
+</div>
+</header>
+<div class="flex min-h-[calc(100vh-80px)]">
+<!-- SideNavBar (Hidden on desktop for focused player, using logic from prompt) -->
+<aside class="hidden lg:flex flex-col p-4 space-y-6 h-[calc(100vh-80px)] w-64 border-r border-gray-100 bg-white sticky top-20 font-noto-serif text-sm">
+<div class="px-2">
+<h3 class="text-lg font-black text-[#5022E1] mb-1">Learning Portal</h3>
+<p class="text-xs text-gray-400">Enlightened growth starts here.</p>
+</div>
+<nav class="space-y-2">
+<div class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-50 rounded-lg cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-indigo-50 text-[#5022E1] rounded-lg font-semibold cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined sidebar-active" data-icon="school" style="font-variation-settings: 'FILL' 1;">school</span>
+<span>My Courses</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-50 rounded-lg cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span>Resources</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-50 rounded-lg cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span>Analytics</span>
+</div>
+<div class="flex items-center gap-3 p-3 text-gray-500 hover:bg-gray-50 rounded-lg cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</div>
+</nav>
+<div class="mt-auto p-4 bg-secondary-container/10 rounded-xl border border-secondary-container/20">
+<p class="text-xs font-bold text-on-secondary-container mb-2">PRO PLAN</p>
+<p class="text-label-sm text-on-secondary-container mb-4">Access all premium workshops and mentor sessions.</p>
+<button class="w-full py-2 bg-secondary text-white rounded-lg text-xs font-bold hover:opacity-90 transition-opacity">Upgrade Plan</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:flex-row max-w-full">
+<!-- Left: Video Player & Info -->
+<section class="flex-1 p-6 md:p-10 space-y-8 bg-background">
+<div class="max-w-4xl mx-auto w-full">
+<!-- Video Breadcrumbs -->
+<div class="flex items-center gap-2 text-label-sm text-outline mb-6">
+<span>The Foundations of Digital Enlightenment</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Module 3: Advanced Cognitive Patterns</span>
+</div>
+<!-- Video Player Container -->
+<div class="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl group border border-gray-200">
+<img class="w-full h-full object-cover opacity-80" data-alt="cinematic shot of high-end laptop on minimalist desk with coding interface, warm atmospheric lighting, scholarly mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh05XjjVKEmsWAUyejYY7Sy7p-VLEntTQW_vrgaobZH9RSANBCNjjXQ9FZnGRJbzqL2g5QXVKY7EnbOla9COtpr1WmFpXC-3xn4GwIkplZkPvw9M7BUkk2M6Tb5ffU9qbqYgkM1g8B545anJ1jKHzVZPQSNQUW_9ZiFQJ1p9xwtN1Is2nuv4M5gQb3p8Q7BF0G3fTfJyUldfQOJ0vc2SgE72dsCMnQqjVHmwWS7Jzvp7wPKbc24KqFEEwTC5JtKzSPMGfz1UmZ5LJb"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer border border-white/20">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Custom Controls Mockup -->
+<div class="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-full h-1 bg-gray-600 rounded-full mb-4 cursor-pointer">
+<div class="h-full w-2/3 bg-secondary rounded-full relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-white">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer">play_arrow</span>
+<span class="material-symbols-outlined cursor-pointer">volume_up</span>
+<span class="text-xs font-medium">12:45 / 18:30</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer">settings</span>
+<span class="material-symbols-outlined cursor-pointer">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Video Meta -->
+<div class="mt-8 flex flex-col md:flex-row md:items-start justify-between gap-6">
+<div class="space-y-2">
+<h1 class="text-headline-lg font-noto-serif text-on-background">3.2 Applying Theoretical Frameworks to Real-World UX</h1>
+<div class="flex items-center gap-4 text-outline">
+<span class="flex items-center gap-1 text-label-sm"><span class="material-symbols-outlined text-sm">schedule</span> 18 minutes</span>
+<span class="flex items-center gap-1 text-label-sm"><span class="material-symbols-outlined text-sm">trending_up</span> Advanced Level</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-outline-variant text-on-surface-variant font-semibold hover:bg-white transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span> Resources
+                            </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-secondary text-white font-bold hover:opacity-90 active:scale-95 transition-all shadow-md">
+<span class="material-symbols-outlined" data-icon="star">star</span> Leave a Review
+                            </button>
+</div>
+</div>
+<!-- Bento Grid Content Details -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+<div class="col-span-2 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+<h3 class="text-headline-md font-noto-serif mb-4">Lesson Description</h3>
+<p class="text-body-md text-on-surface-variant mb-6">
+                                In this lesson, we dive deep into the practical application of the Cognitive Load Theory. You will learn how to audit your existing interfaces for friction points and apply the "Enlightened Flow" methodology developed exclusively at SHN Academy. 
+                            </p>
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container mt-1">check_circle</span>
+<span class="text-body-md text-on-background">Master the 7 principles of visual hierarchy.</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container mt-1">check_circle</span>
+<span class="text-body-md text-on-background">Learn to implement dark mode without losing semantic meaning.</span>
+</div>
+</div>
+</div>
+<div class="bg-primary-container p-8 rounded-2xl shadow-lg flex flex-col justify-between text-on-primary-container">
+<div>
+<h3 class="text-headline-md font-noto-serif text-white mb-2">Mentor Notes</h3>
+<p class="text-sm opacity-90 leading-relaxed">
+                                    "Remember, the goal is not just to make it pretty, but to make it invisible. A user who doesn't notice the UI is a user who is learning effectively."
+                                </p>
+</div>
+<div class="mt-6 flex items-center gap-3">
+<img class="w-12 h-12 rounded-full border-2 border-white/20" data-alt="close-up portrait of a focused male instructor with glasses, soft cinematic background lighting, professional academic look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJNLDH1e57urqe15LT2-3Us3-XrZZZ834C1fSOonRON6RLevRF_4i777XoAEO0DOI-qS0vZ2g_oJ7F665aLUqg7p7m6Gzc6VDDbtqY9wuhmoLI0LaKwvvkoaC9urQXH6wBqQBhQjdO40V68PK5lt1QBIeo4VxPcATBCx_YC9iIrCcNsneqQMoG0hnZtLVYk8t8WcfdEuo5rqDBabh3SKq-kLYPaksjXicOSs9c0ZXK1E8kfiYfwQD6-5aROZLuT0Cv0cUfmZhc9BB"/>
+<div>
+<p class="text-label-bold text-white">Dr. Julian Vance</p>
+<p class="text-xs opacity-70">Academy Director</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Sidebar: Course Progress -->
+<aside class="w-full md:w-96 bg-white border-l border-gray-100 h-full md:h-[calc(100vh-80px)] md:sticky md:top-20 overflow-y-auto">
+<div class="p-6 border-b border-gray-100">
+<h2 class="text-headline-md font-noto-serif text-on-background mb-4">Course Progress</h2>
+<div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[74%] rounded-full"></div>
+</div>
+<p class="text-label-sm text-outline mt-2 text-right">24 / 32 Lessons Completed</p>
+</div>
+<div class="p-0">
+<!-- Module 1 -->
+<div class="group">
+<div class="flex items-center justify-between p-4 bg-surface-container-low border-b border-gray-50 cursor-pointer">
+<span class="text-label-bold text-on-background">Module 1: Introduction to Academy</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</div>
+<div class="bg-white">
+<div class="flex items-center gap-4 p-4 border-b border-gray-50 bg-tertiary/5">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-background">1.1 Welcome to SHN</p>
+<p class="text-xs text-outline">04:20</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 border-b border-gray-50 bg-tertiary/5">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-background">1.2 Syllabus &amp; Goals</p>
+<p class="text-xs text-outline">12:15</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 2 -->
+<div class="group">
+<div class="flex items-center justify-between p-4 bg-surface-container-low border-b border-gray-50 cursor-pointer">
+<span class="text-label-bold text-on-background uppercase tracking-wider text-[11px]">Module 2: Visual Literacy</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</div>
+</div>
+<!-- Module 3 -->
+<div class="group">
+<div class="flex items-center justify-between p-4 bg-white border-b border-gray-50 cursor-pointer">
+<div class="flex-1">
+<span class="text-label-bold text-[#5022E1]">Module 3: Advanced Cognitive Patterns</span>
+<p class="text-xs text-primary/60 mt-1">4 Lessons · 1h 45m</p>
+</div>
+<span class="material-symbols-outlined text-primary">expand_less</span>
+</div>
+<div class="bg-white">
+<div class="flex items-center gap-4 p-4 border-b border-gray-50 bg-tertiary/5">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-background">3.1 Cognitive Load Theory</p>
+<p class="text-xs text-outline">22:40</p>
+</div>
+</div>
+<!-- Active Lesson -->
+<div class="flex items-center gap-4 p-4 border-b border-l-4 border-l-primary border-gray-50 bg-indigo-50">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+<div class="flex-1">
+<p class="text-sm font-bold text-primary">3.2 Theoretical Frameworks</p>
+<div class="mt-2 w-full h-1 bg-gray-200 rounded-full">
+<div class="bg-primary h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 border-b border-gray-50 opacity-60">
+<span class="material-symbols-outlined text-outline">lock</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-background">3.3 Friction Analysis</p>
+<p class="text-xs text-outline">15:55</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 border-b border-gray-50 opacity-60">
+<span class="material-symbols-outlined text-outline">lock</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-on-background">3.4 Module Assessment</p>
+<p class="text-xs text-outline">Quiz</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 4 -->
+<div class="group">
+<div class="flex items-center justify-between p-4 bg-surface-container-low border-b border-gray-50 cursor-pointer opacity-50">
+<span class="text-label-bold text-on-background uppercase tracking-wider text-[11px]">Module 4: Graduation Project</span>
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-gray-50 border-t border-gray-200 w-full py-12 mt-auto font-noto-serif text-xs">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-sm font-bold text-gray-900">SHN Academy</span>
+<p class="text-gray-500 max-w-xs leading-relaxed">© 2024 SHN Academy. Empowering enlightened growth through sophisticated digital education.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
+<a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Terms of Service</a>
+<a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Cookie Policy</a>
+<a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Affiliate Program</a>
+</div>
+</div>
+</footer>
+</body></html>

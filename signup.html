@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up - SHN Academy</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#eae7e7",
+                    "on-primary-container": "#c7bcff",
+                    "on-secondary-fixed": "#281900",
+                    "primary": "#3900b7",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1c1b1b",
+                    "surface-dim": "#dcd9d9",
+                    "primary-container": "#5022e1",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-container": "#21e417",
+                    "on-surface-variant": "#484556",
+                    "surface-tint": "#5d37ee",
+                    "primary-fixed": "#e5deff",
+                    "inverse-surface": "#313030",
+                    "tertiary-fixed-dim": "#24e519",
+                    "surface-container": "#f0eded",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f8",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#014600",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#016000",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#77ff61",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#c9c4d9",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-fixed": "#ffdeac",
+                    "on-tertiary-fixed": "#002200",
+                    "outline": "#797587",
+                    "surface-bright": "#fcf9f8",
+                    "primary-fixed-dim": "#c9bfff",
+                    "on-secondary-fixed-variant": "#5f4100",
+                    "surface": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "secondary-fixed-dim": "#ffba35",
+                    "on-primary-fixed-variant": "#4503d7",
+                    "on-primary-fixed": "#1b0063",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#7e5700",
+                    "on-background": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#015300",
+                    "secondary-container": "#ffb61e",
+                    "on-secondary-container": "#6c4a00",
+                    "inverse-primary": "#c9bfff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "section-gap": "80px",
+                    "margin-desktop": "48px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display": [
+                            "Noto Serif"
+                    ],
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "headline-md": [
+                            "Noto Serif"
+                    ],
+                    "label-sm": [
+                            "Manrope"
+                    ],
+                    "headline-lg": [
+                            "Noto Serif"
+                    ],
+                    "label-bold": [
+                            "Manrope"
+                    ],
+                    "body-lg": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "display": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-low text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Main Content Area -->
+<main class="flex-grow flex items-center justify-center p-gutter md:p-margin-desktop relative overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-primary-fixed-dim/30 to-transparent -z-10 pointer-events-none"></div>
+<div class="w-full max-w-md">
+<!-- Brand / Logo Area -->
+<div class="text-center mb-8">
+<img alt="SHN Academy Logo" class="h-16 mx-auto mb-6 object-contain" data-alt="SHN Academy official brand logo featuring a stylized golden sun" src="https://lh3.googleusercontent.com/aida/ADBb0uj82RPiY9ykp0v3riYYTzQA88V1zGgl-WaA84sX8q3oeu1rnO31E7o07-LF8lTXJKwRjD19UXstZvZoxAhNqbPD5SyWD2CvKRmJz0UKXJu4-o3cMWt_i8dN6afgVVlFDf-JzSvJNrQ4H2Tf_6MQblJpHvMrAztKHk0pUrqCORaveyjV2WUJJELHmCwPKMUB4CmvuQq8cuAx2rxWpvhnJwgt7aZR5Jzr4wXsBFFVyNaw51pGoVqk8TpzPIUn8f9HOqXlJFKp3bRovmY"/>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Join SHN Academy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Embark on a journey of enlightened growth.</p>
+</div>
+<!-- Signup Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-8 shadow-sm">
+<form action="#" class="space-y-6" method="POST">
+<!-- Full Name Field -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-2" for="fullName">Full Name</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline-variant" data-icon="person">person</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline-variant rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" id="fullName" name="fullName" placeholder="John Doe" required="" type="text"/>
+</div>
+</div>
+<!-- Email Field -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-2" for="email">Email Address</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline-variant" data-icon="mail">mail</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline-variant rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-2" for="password">Password</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline-variant" data-icon="lock">lock</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline-variant rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<p class="mt-2 font-label-sm text-label-sm text-on-surface-variant">Must be at least 8 characters long.</p>
+</div>
+<!-- Submit Button -->
+<button class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm font-label-bold text-label-bold text-on-primary bg-primary hover:bg-primary-container hover:text-on-primary-container focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors" type="submit">
+                        Sign Up
+                    </button>
+</form>
+<!-- Divider -->
+<div class="mt-8 relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="px-2 bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">
+                            Already a student?
+                        </span>
+</div>
+</div>
+<!-- Login Link -->
+<div class="mt-6 text-center">
+<a class="font-label-bold text-label-bold text-primary hover:text-primary-container transition-colors" href="#">
+                        Log In to your account
+                    </a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component from JSON -->
+<footer class="bg-gray-50 dark:bg-gray-950 w-full border-t mt-auto border-t border-gray-200 dark:border-gray-800">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto w-full">
+<div class="mb-6 md:mb-0 text-center md:text-left">
+<p class="text-lg font-semibold text-gray-900 dark:text-gray-100 font-serif mb-2">SHN Academy</p>
+<p class="font-serif text-gray-600 dark:text-gray-400 text-sm">© 2024 SHN Academy. Empowering enlightened growth through academic prestige.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-serif text-gray-600 dark:text-gray-400 text-sm text-gray-500 dark:text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors focus:ring-2 focus:ring-indigo-500 rounded outline-none" href="#">Privacy Policy</a>
+<a class="font-serif text-gray-600 dark:text-gray-400 text-sm text-gray-500 dark:text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors focus:ring-2 focus:ring-indigo-500 rounded outline-none" href="#">Terms of Service</a>
+<a class="font-serif text-gray-600 dark:text-gray-400 text-sm text-gray-500 dark:text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors focus:ring-2 focus:ring-indigo-500 rounded outline-none" href="#">Help Center</a>
+<a class="font-serif text-gray-600 dark:text-gray-400 text-sm text-gray-500 dark:text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors focus:ring-2 focus:ring-indigo-500 rounded outline-none" href="#">Contact Us</a>
+</nav>
+</div>
+</footer>
+</body></html>

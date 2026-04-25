@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#7e5700",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#014600",
+                        "surface-variant": "#e5e2e1",
+                        "primary": "#3900b7",
+                        "primary-container": "#5022e1",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#ffba35",
+                        "background": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "outline-variant": "#c9c4d9",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#016000",
+                        "surface": "#fcf9f8",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed": "#002200",
+                        "outline": "#797587",
+                        "on-primary-fixed": "#1b0063",
+                        "secondary-container": "#ffb61e",
+                        "surface-tint": "#5d37ee",
+                        "tertiary-fixed": "#77ff61",
+                        "on-secondary-fixed": "#281900",
+                        "on-primary-container": "#c7bcff",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#6c4a00",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#484556",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c9bfff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#4503d7",
+                        "inverse-primary": "#c9bfff",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-container": "#21e417",
+                        "primary-fixed": "#e5deff",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#ffdeac",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#015300",
+                        "tertiary-fixed-dim": "#24e519"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-bold": ["Manrope"],
+                        "display": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- Top Navigation Bar -->
+<header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-8 h-20 max-w-7xl mx-auto font-noto-serif antialiased">
+<div class="flex items-center gap-2">
+<img alt="SHN Academy Logo" class="h-10 w-auto" data-alt="New SHN Academy logo featuring a golden abstract sun design" src="https://lh3.googleusercontent.com/aida/ADBb0uj82RPiY9ykp0v3riYYTzQA88V1zGgl-WaA84sX8q3oeu1rnO31E7o07-LF8lTXJKwRjD19UXstZvZoxAhNqbPD5SyWD2CvKRmJz0UKXJu4-o3cMWt_i8dN6afgVVlFDf-JzSvJNrQ4H2Tf_6MQblJpHvMrAztKHk0pUrqCORaveyjV2WUJJELHmCwPKMUB4CmvuQq8cuAx2rxWpvhnJwgt7aZR5Jzr4wXsBFFVyNaw51pGoVqk8TpzPIUn8f9HOqXlJFKp3bRovmY"/>
+<span class="text-2xl font-bold text-[#5022E1] dark:text-white tracking-tight">SHN Academy</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#5022E1] dark:text-indigo-400 border-b-2 border-[#5022E1] pb-1 font-bold" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200" href="#">About</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200" href="#">Blog</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200" href="#">Online Courses</a>
+<a class="text-gray-600 dark:text-gray-400 font-medium hover:text-[#5022E1] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 text-gray-700 dark:text-gray-300 font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 active:scale-95 transform">Login</button>
+<button class="px-6 py-2 bg-primary-container text-white rounded-lg font-bold shadow-md hover:brightness-110 transition-all duration-200 active:scale-95 transform">Sign Up</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-48 bg-white">
+<div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/10 text-on-secondary-container border border-secondary-container/20">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-bold text-label-sm">ENLIGHTENED GROWTH PLATFORM</span>
+</div>
+<h1 class="font-display text-display text-on-background leading-tight">
+                        Elevate Your Intellectual <span class="text-primary-container">Potential</span> with SHN Academy
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Experience a high-stakes, professional learning environment designed for deep mastery and academic prestige.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary-container text-white rounded-xl font-bold text-lg shadow-lg shadow-primary-container/20 hover:scale-[1.02] transition-transform active:scale-95">
+                            Browse All Courses
+                        </button>
+<button class="px-8 py-4 border-2 border-primary-container text-primary-container rounded-xl font-bold text-lg hover:bg-primary-container/5 transition-colors">
+                            Watch Intro Video
+                        </button>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="close-up portrait of a professional student woman smiling with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi71eoNTOmJpVMU_GjyX8_1wLC5vEuFdKSC5PA6k97Dr_qiG3UHfRi7kmI3gA8zFBcPMYoDLdZUGgiKFitv_G1-B9IpKnpwA3cqLRhL-9fcvM24PGWOv-_2yWy8dmXWYayVefWBv7CpJ0cvadqyegG0oRFLyY_a8Za8huDqmDj4hc2nroiOgMMGSvfWWDlAxcmOefWYCfMaIPkONeegsx4lzCic7p-TUvYUZj-DQFZi5r5As9ZF340Zx6vZZFxZUjgWhovxpH6H_T4"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="close-up portrait of a young professional man in a business casual attire with bright background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATy_X9r0Uq9BLcRMwWlQfOXL5Mnthsrk8Otiu2mS0a9MHPYIoHC-T_VN2gTpFq8kQzLwFSDgXPy9aBr7Y5B6doy3djk4-VIhn6L31cz4HZVuEWFMR6S6nzvJ18vpc1xhBMeFPd3rRJBSkUrJAwiQApfYFXKEIgHA45WMJIH1aI5XfKyLGGyTp4Z-YnXmkkuBIgFWbAO4fgbD_s_nMRBfnVihCouFHt__km40RCfRvtzOF23lIg5RMWG5wJYAUFHUB2-lsz3xer2J6J"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="close-up portrait of a diverse female student in a bright studio setting with friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvGj8siJ5wQo9Ud4HNRSYKE_yv-pgdnE66vZXTGg9dmGbZmecToiZsPj9tQ5MlcFIE00jaTTghdnk3SOdrNrkvPEK9NDWUYDXD91qBLZN8XbFBCzMcVi5MF0-1k38RnFhCyWCXIgfLgqg6FsGjqwGxGxx4TfgH0lIDKI98YPhYqBEb8jbRr2z_DQJtncxGHlCahXQRKBLaBDSiFpHHzx_e1K9pZ2Xmf0E89_-vKsRobUhcGKq58QMfMRkIT6lZjXMCQ0_XAlmCGK9F"/>
+</div>
+<p class="text-sm font-medium text-on-surface-variant">
+                            Joined by <span class="text-on-background font-bold">12,000+</span> global scholars
+                        </p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="relative bg-surface rounded-3xl overflow-hidden border border-outline-variant shadow-2xl">
+<img alt="Students learning together" class="w-full h-full object-cover" data-alt="group of diverse young professionals collaborating with laptops in a bright modern sunlit library office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxzmfBieTfCEJdMaTjiAQtAXTv1nQ_UoaAo-Fof1vKmyfv2FYlnH0wXp6JErryiQWwl249TEWU1UKbOYBhCDPsVP-pu16TrJ0UWcCkOTbDn9aqFJPiTLRsvqYiQy1zqihDzU68P-E8UtmibH0HEzbZWmf9esknEv87ZGgHVFEF4CQ4DdyBChUP3dvPzBcey6f7VxZxvs_EzBb0IDe5il9Ie4dCG9INzge3gBoApt3q0UfvfOq-NflNiBvIV2sJMVbbMaAJt5y_re1k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur-md rounded-2xl border border-white/20">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-bold text-label-sm text-secondary">NEXT SESSION</p>
+<h3 class="font-headline-md text-headline-md text-on-background">Modern Corporate Strategy</h3>
+</div>
+<div class="text-right">
+<p class="font-label-bold text-label-sm text-primary-container">STARTS IN</p>
+<p class="font-headline-md text-headline-md font-bold">12:45:00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Courses Section (Bento Style) -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-12">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Featured Disciplines</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Our most prestigious courses curated by industry leaders and academic pioneers.</p>
+</div>
+<a class="text-primary-container font-bold flex items-center gap-2 hover:underline group" href="#">
+                        Explore all courses
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Large Card -->
+<div class="md:col-span-8 bg-white rounded-3xl border border-outline-variant overflow-hidden flex flex-col group cursor-pointer hover:shadow-xl transition-shadow">
+<div class="relative h-2/3 overflow-hidden">
+<img alt="Executive Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional workshop setting with leader presenting to a focused team in a minimalist modern boardroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhC43vN25BshgzitVop6KpRw92MLSg2mMRjBcX3cUE7sQ400winKqOh1C82i4r1gXR9XVJefGC39A3I_QhqS1k3cGVBcEUc7LMxu7nPE49D0vy2bv1DOZSVbb90MYJgXVaz0a-dfqbTTrYXb6JBujiFmvCsbGLSXrbnKSVGjf7K15iv0TBxjn6eXcteL2uMKasSBN7RzWRfyjak8dTKF1jeOEJ3fGA1mUT7BUjSl3DadOhINYtVhUeUVTndDLvfi6vKRvfcoHEGMXC"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center gap-2 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm">business_center</span>
+<span class="font-label-bold text-xs uppercase tracking-widest">Leadership</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">The Executive Management Masterclass</h3>
+<p class="text-on-surface-variant line-clamp-2">Master the art of decision-making and organizational psychology with our flagship leadership program.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">person</span>
+</div>
+<div>
+<p class="text-sm font-bold">Dr. Alistair Vance</p>
+<p class="text-xs text-on-surface-variant">Senior Faculty</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xl font-bold text-primary-container">$499.00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Stack -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="flex-1 bg-white rounded-3xl border border-outline-variant p-6 hover:shadow-lg transition-shadow cursor-pointer group">
+<div class="h-32 rounded-2xl overflow-hidden mb-4">
+<img alt="Data Science" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="abstract data visualization graphs and charts on a clean digital screen with cool blue and purple lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9bqYXnwHajzzAIRqc4VsBHZG2ti9brPkP6WqJUz0Wh7LcE5BJ_IMJnMg1ICtY2Q-o8ZyrRqgW1GtQ58k_WSCULAun6dL_2c_t_LefnM3OtnKJZtbHvNYNdU6GZGODb4ta0s2bH0doETKW4xPyvDS1eWAnu99EuGl2nVRrpZ6m4JTal1zbof5r3LqoIiRTuUYObja1i3lmOUgPnMsRYXnN5ZeLr95MCfmpk28SKUmX5Elika2ToA81_q2OmXskLsJ1N6gdEUHl_hG"/>
+</div>
+<span class="font-label-bold text-xs text-secondary uppercase">Technology</span>
+<h4 class="font-bold text-lg mt-1 group-hover:text-primary-container transition-colors">Advanced Predictive Analytics</h4>
+<div class="flex items-center justify-between mt-4">
+<span class="text-sm text-on-surface-variant">24 Lessons</span>
+<span class="font-bold text-primary-container">$299</span>
+</div>
+</div>
+<div class="flex-1 bg-white rounded-3xl border border-outline-variant p-6 hover:shadow-lg transition-shadow cursor-pointer group">
+<div class="h-32 rounded-2xl overflow-hidden mb-4">
+<img alt="Creative Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="overhead shot of professional design tools and a high-end drawing tablet on a clean white desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf0cZYDNC0LJKmLihxbyOyiEdurE1Ky42vKhGjSBDqBaLq-aB_WFJSeK9ntXYaFW55c3WVTAt--5QEzEHeEAxNB0qCNp5L5w7rNBl2Q7qljGbw_PCfvtSN4FyhNEh4NUUEbwi6hm0e21-v8q5NR5QU0Tc_cFoPZCB4bS8eW1JkD_SdHfiTLzafIfGjhRez34K32LEYFHcelvWuBFEgq7prwU9cuKLqAzn-6Sge-vTSOpTxN9CNEJP9GlSGEiTF4dFl55WQQtHh_0Cd"/>
+</div>
+<span class="font-label-bold text-xs text-secondary uppercase">Creative Arts</span>
+<h4 class="font-bold text-lg mt-1 group-hover:text-primary-container transition-colors">Systematic UI/UX Design</h4>
+<div class="flex items-center justify-between mt-4">
+<span class="text-sm text-on-surface-variant">18 Lessons</span>
+<span class="font-bold text-primary-container">$199</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap bg-white overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="absolute -left-20 top-0 text-[180px] font-bold text-surface-container leading-none select-none pointer-events-none opacity-50">
+                    "
+                </div>
+<div class="text-center mb-16 relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Alumni Perspectives</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Hear from the professionals who transformed their careers.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 relative z-10">
+<div class="p-8 bg-surface rounded-2xl border border-outline-variant relative">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-background mb-8">"SHN Academy provided the intellectual rigor I needed. The content is far superior to generic platforms I've tried in the past."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full" data-alt="professional male portrait with confident smile in blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZE1BlkY2L7A6lF7PHNVerxBvXY3kTwyUqNeFFgk7EmnCwbp-GSFJF5Uy-u1TaVZ4XiiKa9BEY67KUU_41MyfManc2fw8sygasYmHyP8iHQjCtjQBrjFwcYBVVTfBxPlZ6aV338kii7T-4LS2TllCRZWYU6HnsVPjkmtSYkXJWj2Cu5RD_1LDN-121hwcIsReQT2XcBWCVreRNOQIVogG2kAXRs5VEAYnzXXVpp0xvtRMFrQsDdZjbMuz9D81ztg8quGHlBjHVmuaV"/>
+<div>
+<p class="font-bold">Marcus Thorne</p>
+<p class="text-xs text-on-surface-variant">Lead Developer, CloudSync</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface rounded-2xl border border-outline-variant relative">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-background mb-8">"The structured approach to learning and the high-quality faculty support made my career pivot possible in record time."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full" data-alt="professional woman portrait wearing glasses and smiling in a modern office hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaRkjs4DbvibMHTP-r38TeKnsGXCYJTLPPD0h6RZ1PSp-Javojy9JPX83i71C8N8tlPxsU9HNfEYEVlLjJY7Bq6W6R1Dvf_k1kkYCJFIUhXdjxPKDq_ag_9upmkNGhXt2MokG8AiUTXq9p2oH1g1o2bx4WkXXLLzf_9851GZ9uQGwCTFfqsujQp5VGrjbqu9l3CsfOt6zROp709dlNa2VWn7lizENthqk4ZkDeoZM9MYQbBNuqAclJNcD3uzFFhYzfV2C_o6e2ix81"/>
+<div>
+<p class="font-bold">Elena Rodriguez</p>
+<p class="text-xs text-on-surface-variant">Creative Director, Artefact</p>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface rounded-2xl border border-outline-variant relative">
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-background mb-8">"Truly enlightened growth. I recommend SHN Academy to anyone serious about their professional development and mastery."</p>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full" data-alt="close-up portrait of a thoughtful mature man with beard in a soft sunlit setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMxmicCEgNwAUwABfkD5e33AWTpkoa4J-VvnAQwLw6uViPpbXmL5RKboPBAdeyuXLz4hUHYaZ6QQzoxkLKZj78JEfCFtMZXfECN7sO9PJIaAh-sOf1jYs5IaNAqqAmxH_LOMf-rbcNU0OAKEHoP4xKbAkTwk_mgsU0EaK-rcGGtPi3PPXoKAWPgiNEqaQ9ktM_cPxWlcQW2SoSmzWUGGTPneItHdrkEtXTGwo9kd9oqYIQ1G4dfwz-ANKEaR96wVij8WGrhGPoJ-Ey"/>
+<div>
+<p class="font-bold">Julian Chen</p>
+<p class="text-xs text-on-surface-variant">Product Analyst, FinTech Lab</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Enrollment -->
+<section class="py-section-gap">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary-container rounded-[40px] p-12 lg:p-20 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="relative z-10 lg:w-2/3">
+<h2 class="font-display text-4xl lg:text-5xl text-white mb-6">Ready to start your journey of enlightenment?</h2>
+<p class="text-on-primary-container text-xl max-w-xl mb-10">Join thousands of students and gain access to industry-leading expertise, premium resources, and a community of high-achievers.</p>
+<div class="flex flex-wrap gap-4">
+<button class="px-10 py-5 bg-secondary-container text-on-secondary-fixed font-bold rounded-2xl shadow-xl hover:translate-y-[-2px] transition-all">Begin Enrollment Now</button>
+<button class="px-10 py-5 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white/20 transition-all backdrop-blur-sm">Request Course Catalog</button>
+</div>
+</div>
+<div class="relative z-10 lg:w-1/3 flex justify-center">
+<div class="bg-white p-8 rounded-3xl shadow-2xl rotate-3 max-w-xs">
+<div class="flex items-center gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-bold text-xs">ACCREDITED PLATFORM</span>
+</div>
+<p class="text-on-background font-bold text-xl mb-2">98% Success Rate</p>
+<p class="text-on-surface-variant text-sm mb-6">Our students consistently report immediate career benefits after completion.</p>
+<div class="h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container w-[98%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-950 w-full py-12 border-t mt-auto border-gray-200 dark:border-gray-800 font-noto-serif text-xs">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<img alt="SHN Academy Logo Small" class="h-8 w-auto" data-alt="Small version of the new SHN Academy logo with the golden sun icon" src="https://lh3.googleusercontent.com/aida/ADBb0uj82RPiY9ykp0v3riYYTzQA88V1zGgl-WaA84sX8q3oeu1rnO31E7o07-LF8lTXJKwRjD19UXstZvZoxAhNqbPD5SyWD2CvKRmJz0UKXJu4-o3cMWt_i8dN6afgVVlFDf-JzSvJNrQ4H2Tf_6MQblJpHvMrAztKHk0pUrqCORaveyjV2WUJJELHmCwPKMUB4CmvuQq8cuAx2rxWpvhnJwgt7aZR5Jzr4wXsBFFVyNaw51pGoVqk8TpzPIUn8f9HOqXlJFKp3bRovmY"/>
+<span class="text-sm font-bold text-gray-900 dark:text-white">SHN Academy</span>
+</div>
+<p class="text-gray-500 max-w-sm">Empowering enlightened growth through high-fidelity academic experiences. We believe in the power of quality education to transform lives.</p>
+<p class="text-gray-400">© 2024 SHN Academy. Empowering enlightened growth.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-widest text-[10px]">Information</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="text-gray-500 hover:text-[#5022E1] transition-colors" href="#">Affiliate Program</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-widest text-[10px]">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
